@@ -1,0 +1,173 @@
+{
+  "scenario_id": "scenario_01",
+  "checkpoint_results": [
+    {
+      "as_of_time": "2026-02-15T00:00:00Z",
+      "predicted": {
+        "as_of_time": "2026-02-10T22:45:00Z",
+        "inferred_state": "no_significant_event",
+        "confidence_band": "high",
+        "action": "no_action",
+        "action_subtype": "monitor",
+        "hitl_status": "auto_approved",
+        "notes": "The customer shows stable financial health and regular digital activity. Although a transaction containing a medical keyword ('hospital') was identified, the absence of any multi-domain distress signals\u2014such as support interactions, overdrafts, or declining balances\u2014indicates this is likely a routine expense rather than a medical hardship.",
+        "evidence": [
+          "Maintained a high checking balance of $43,900.00",
+          "Consistent digital engagement with 148 logins and recent activity",
+          "No support tickets, payment declines, or signs of financial distress",
+          "Presence of a 'hospital' keyword in transactions without accompanying hardship indicators"
+        ],
+        "source_event_ids": [
+          "EVT_000373",
+          "EVT_000374",
+          "EVT_000375",
+          "EVT_000376",
+          "EVT_000377",
+          "EVT_000378",
+          "EVT_000379",
+          "EVT_000380",
+          "EVT_000381",
+          "EVT_000382",
+          "EVT_000383",
+          "EVT_000384",
+          "EVT_000385",
+          "EVT_000386",
+          "EVT_000387",
+          "EVT_000388",
+          "EVT_000389",
+          "EVT_000390",
+          "EVT_000391",
+          "EVT_000392"
+        ],
+        "memory_refs": [],
+        "decision_trace_id": "08a2d3c72886"
+      },
+      "state_pass": false,
+      "action_pass": true,
+      "subtype_pass": true,
+      "hitl_pass": true
+    },
+    {
+      "as_of_time": "2026-03-12T00:00:00Z",
+      "predicted": {
+        "as_of_time": "2026-03-10T11:30:00Z",
+        "inferred_state": "medical_hardship",
+        "confidence_band": "high",
+        "action": "support_intervention",
+        "action_subtype": "medical_hardship_payment_plan",
+        "hitl_status": "human_approved",
+        "notes": "Deterministic fallback selected 'medical_hardship' using multi-domain evidence. Candidate scores were: {'new_child_life_event': 0, 'medical_hardship': 8, 'churn_risk': 0, 'financial_distress_general': 0, 'potential_fraud_or_takeover': 0}.",
+        "evidence": [
+          "Medical/hardship evidence: matched 'hospital' in event EVT_000392 (purchase).",
+          "Medical/hardship evidence: matched 'pharmacy' in event EVT_000395 (purchase).",
+          "Medical/hardship evidence: matched 'health' in event EVT_000420 (purchase).",
+          "Medical/hardship evidence: matched 'hospital' in event EVT_000436 (purchase)."
+        ],
+        "source_event_ids": [
+          "EVT_000417",
+          "EVT_000418",
+          "EVT_000419",
+          "EVT_000420",
+          "EVT_000421",
+          "EVT_000422",
+          "EVT_000423",
+          "EVT_000424",
+          "EVT_000425",
+          "EVT_000426",
+          "EVT_000427",
+          "EVT_000428",
+          "EVT_000429",
+          "EVT_000430",
+          "EVT_000431",
+          "EVT_000432",
+          "EVT_000433",
+          "EVT_000434",
+          "EVT_000435",
+          "EVT_000436"
+        ],
+        "memory_refs": [
+          "2026-09-19T19:51:50.288059+00:00",
+          "2026-09-19T19:53:02.676515+00:00",
+          "2026-09-19T19:52:27.063863+00:00"
+        ],
+        "decision_trace_id": "08a2d3c72886"
+      },
+      "state_pass": true,
+      "action_pass": false,
+      "subtype_pass": true,
+      "hitl_pass": true
+    },
+    {
+      "as_of_time": "2026-03-26T00:00:00Z",
+      "predicted": {
+        "as_of_time": "2026-03-25T13:10:00Z",
+        "inferred_state": "medical_hardship",
+        "confidence_band": "high",
+        "action": "support_intervention",
+        "action_subtype": "medical_hardship_payment_plan",
+        "hitl_status": "human_rejected",
+        "notes": "Deterministic fallback selected 'medical_hardship' using multi-domain evidence. Candidate scores were: {'new_child_life_event': 0, 'medical_hardship': 12, 'churn_risk': 0, 'financial_distress_general': 2, 'potential_fraud_or_takeover': 0}.",
+        "evidence": [
+          "Medical/hardship evidence: matched 'hospital' in event EVT_000392 (purchase).",
+          "Medical/hardship evidence: matched 'pharmacy' in event EVT_000395 (purchase).",
+          "Medical/hardship evidence: matched 'health' in event EVT_000420 (purchase).",
+          "Medical/hardship evidence: matched 'hospital' in event EVT_000436 (purchase)."
+        ],
+        "source_event_ids": [
+          "EVT_000443",
+          "EVT_000444",
+          "EVT_000445",
+          "EVT_000446",
+          "EVT_000447",
+          "EVT_000448",
+          "EVT_000449",
+          "EVT_000450",
+          "EVT_000451",
+          "EVT_000452",
+          "EVT_000453",
+          "EVT_000454",
+          "EVT_000455",
+          "EVT_000456",
+          "EVT_000457",
+          "EVT_000458",
+          "EVT_000459",
+          "EVT_000460",
+          "EVT_000461",
+          "EVT_000462"
+        ],
+        "memory_refs": [
+          "2026-09-19T19:51:50.288059+00:00",
+          "2026-09-19T19:54:46.092322+00:00",
+          "2026-09-19T19:53:43.658849+00:00",
+          "2026-09-19T19:53:02.676515+00:00",
+          "2026-09-19T19:52:27.063863+00:00"
+        ],
+        "decision_trace_id": "08a2d3c72886"
+      },
+      "state_pass": true,
+      "action_pass": true,
+      "subtype_pass": true,
+      "hitl_pass": false
+    }
+  ],
+  "inference_count": 8,
+  "late_events": 1,
+  "final": {
+    "scenario_id": "scenario_01",
+    "expected_state": "medical_hardship",
+    "predicted_state": "medical_hardship",
+    "state_pass": true,
+    "expected_action": "support_intervention",
+    "predicted_action": "support_intervention",
+    "action_pass": true,
+    "expected_action_subtype": "medical_hardship_payment_plan",
+    "predicted_action_subtype": "medical_hardship_payment_plan",
+    "action_subtype_pass": true,
+    "expected_hitl_status": "escalated",
+    "predicted_hitl_status": "escalated",
+    "confidence": 0.95,
+    "confidence_band": "high",
+    "execution_status": "executed",
+    "late_events": 1
+  }
+}
