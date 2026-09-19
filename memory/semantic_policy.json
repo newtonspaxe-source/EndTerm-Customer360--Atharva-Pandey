@@ -1,0 +1,27 @@
+{
+  "description": "Shared policy memory for Customer 360 prototype",
+  "rules": [
+    {
+      "state": "medical_hardship",
+      "action": "support_intervention",
+      "action_subtype": "medical_hardship_payment_plan",
+      "human_review": true
+    },
+    {
+      "state": "new_child_life_event",
+      "action": "personalized_offer",
+      "action_subtype": "childcare_savings_or_insurance_plan",
+      "human_review": true
+    },
+    {
+      "state": "churn_risk",
+      "action": "proactive_retention_outreach",
+      "human_review": false
+    },
+    {
+      "state": "potential_fraud_or_takeover",
+      "action": "compliance_fraud_hold",
+      "human_review": true
+    }
+  ]
+}
